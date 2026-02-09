@@ -1,68 +1,72 @@
-# 🎓 Trustworthy RAG System for Educational Program Evaluation
+# 🎓 Trustworthy Neuro-Symbolic RAG for Educational Policy
 ### *Reconciling Interpretability and Accuracy in High-Stakes Decision Making*
 
-> **⚠️ Research Status: Active / Confidential**
-> This repository contains the **architectural framework, methodology, and documentation** for my ongoing M.Sc. thesis at the **Federal University of Rio Grande (FURG)**.
+> **⚠️ Research Status: Active / Confidential (M.Sc. Thesis)**
+> This repository documents the **architectural framework, methodology, and evaluation protocols** for my ongoing research at the **Federal University of Rio Grande (FURG)**.
 >
-> *Due to the active nature of this research and data privacy protocols, the source code is currently restricted. Access may be granted to academic supervisors or collaborators upon request.*
+> *Due to data privacy protocols (LGPD) and active development, the source code is currently restricted. Access may be granted to academic supervisors upon request.*
 
 ---
 
 ## 📖 Project Overview
-In the domain of education, "black box" AI models are insufficient. When evaluating graduate programs that impact funding and student futures, decision-makers need **traceability, fairness, and truth**.
+In the domain of educational policy, "black box" AI models are dangerous. When evaluating graduate programs (PPGs) for funding and accreditation, stakeholders need **mathematical precision** combined with **contextual nuance**.
 
-This research proposes an **AI-Powered Predictive and Analytical System** that integrates **Large Language Models (LLMs)** with **Retrieval-Augmented Generation (RAG)**. By grounding the model in official, unstructured reports from the **Sucupira Platform** and **CAPES**, we aim to eliminate "hallucinations" and provide policymakers with verifiable, evidence-based insights.
-
-### 🎯 Core Objectives
-* **Mitigate Hallucination:** Reduce the risk of LLMs inventing facts by grounding every response in retrieved, authoritative documents.
-* **Ensure Fairness:** Implement bias mitigation strategies to ensure equitable evaluation across diverse regional institutions in Brazil.
-* **Human-Verifiable Insights:** Transform complex, unstructured institutional data into transparent policy insights that humans can audit.
+This research introduces a **Hybrid Neuro-Symbolic RAG Architecture** that combines the rigid accuracy of structured data analysis with the flexible understanding of Large Language Models (LLMs). By grounding the model in official **CAPES** and **Sucupira** reports, we mitigate hallucinations and provide verifiable, evidence-based policy insights.
 
 ---
 
-## 🛠️ System Architecture & Methodology
+## 🧠 The Concept: A "Dual-Brain" Architecture
 
-This system utilizes a **RAG framework** to bridge the gap between static datasets and generative AI.
+To solve the tension between **Creativity (Generative AI)** and **Factuality (Auditing)**, this system operates on two distinct logical planes:
 
-### 1. Data Acquisition & Preprocessing
-* **Source:** **CAPES Open Data Portal** (Structured) & **Sucupira Platform** (Unstructured PDF Reports).
-* **Pipeline:**
-    * **Text Extraction:** Parsing PDF reports to isolate relevant evaluation criteria.
-    * **Chunking:** Using **LangChain** text splitters to segment documents into semantic units.
-    * **Normalization:** Cleaning text to remove artifacts and standardize formatting.
+### 🧮 1. The "Left Brain" (Symbolic Logic Layer)
+* **Goal:** Zero-tolerance error for quantitative metrics.
+* **Method:** Python & Pandas execute rigid mathematical formulas on raw CSV data. The LLM is **not allowed to guess** numbers; it is fed these pre-calculated immutable facts.
+* **Key Performance Indicators (KPIs) Calculated:**
+    * **Faculty Stability Index ($S$):** Measuring the reliance on permanent vs. temporary staff.
+    * **Student Success Rate ($R_{success}$):** Quantifying graduation efficiency vs. dropout rates.
+    * **PhD Training Density:** Determining the program's maturity ceiling.
+    * **Internationalization Ratio:** Mapping the density of external collaboration networks.
 
-### 2. Retrieval Module (The "Memory")
-* **Vector Database:** **ChromaDB** is used to index high-dimensional embeddings of the educational data.
-* **Search Mechanism:** Semantic similarity search retrieves the specific "chunks" of policy documents relevant to a user's query.
-
-### 3. Generator Module (The "Reasoning")
-* **LLM Integration:** A fine-tuned Large Language Model (e.g., via **Hugging Face Transformers**) synthesizes the retrieved context.
-* **Output:** Generates a coherent, factual response with citations pointing back to the original CAPES documents.
-
----
-
-## 🧰 Technical Stack
-
-* **Orchestration:** [LangChain](https://www.langchain.com/) (for chaining retrieval and generation steps).
-* **Vector Store:** [ChromaDB](https://www.trychroma.com/) (for efficient embedding indexing).
-* **Embeddings:** Hugging Face Transformers (BERT/GPT-based models).
-* **Language:** Python (PyPDF, Pandas, NumPy).
-* **Visualization:** Power BI & R (ggplot2) for output analysis.
+### 🎨 2. The "Right Brain" (Semantic Neural Layer)
+* **Goal:** High interpretability and contextual understanding.
+* **Method:** A **Retrieval-Augmented Generation (RAG)** pipeline retrieves unstructured narrative text (program proposals) to explain *why* the numbers look the way they do.
+* **Mechanism:** Uses **FAISS** for dense vector retrieval to find semantic evidence (e.g., "Social Insertion" strategies) buried in thousands of pages of PDF reports.
 
 ---
 
-## 🌍 Ethical Alignment & Social Impact
-This project is strictly aligned with **Sustainable Development Goal 4 (SDG 4)**: *Ensure inclusive and equitable quality education*.
+## 🛠️ Methodology & Technical Stack
 
-* **Bias Mitigation:** We actively audit the retrieval process to prevent historical biases in educational data from influencing future predictions.
-* **Data Privacy:** All data handling complies with **LGPD** (Brazil's General Data Protection Law) and ethical research standards defined by the university.
-* **Human-in-the-Loop:** This system is designed to *support* human decision-makers, not replace them.
+### Data Pipeline (ETL)
+* **Structured Sources:** CAPES Open Data (Discentes, Docentes, Produções, Participantes).
+* **Unstructured Sources:** Sucupira Platform Reports (`proposta.txt`).
+* **Preprocessing:** Recursive Text Splitting (Chunk Size: 2000 | Overlap: 200) to maintain narrative flow.
+
+### The RAG Engine
+* **Orchestration:** [LangChain](https://www.langchain.com/)
+* **Vector Database:** **FAISS** (Facebook AI Similarity Search) optimized for millisecond-latency retrieval.
+* **Embeddings:** `paraphrase-multilingual-mpnet-base-v2` (HuggingFace) for high-fidelity Portuguese semantic understanding.
+* **Inference Model:** **Gemini 2.0 Flash** / **Mixtral** (chosen for long-context reasoning capabilities).
+
+### Evaluation Framework: RAG³
+We utilize a multi-dimensional validation strategy to ensure trustworthiness:
+1.  **Retrieval Metrics:** Context Recall@k, Context Precision (ensuring we find the right documents).
+2.  **Generation Metrics:** ROUGE-L (structural alignment), Groundedness (fact-checking against source text).
+3.  **Human Metrics:** Policy Usefulness & Expert Judgment (evaluated by domain specialists).
 
 ---
 
-## 📬 Contact & Access
+## 🌍 Impact & Alignment
+This project aligns with **Sustainable Development Goal 4 (Quality Education)** by democratizing access to complex institutional data. It allows policymakers to move from **static annual snapshots** to **dynamic, evolutionary analysis** of graduate programs.
+
+* **Bias Mitigation:** Fairness-aware retrieval audits to prevent historical prestige bias.
+* **Traceability:** Every AI-generated insight is cited with a direct link to the source document (row in CSV or page in PDF).
+
+---
+
+## 📬 Contact
 **Femi Samuel Adeola**
 * *M.Sc. Candidate, Computer Engineering (FURG)*
-* *Research Focus: Trustworthy AI, RAG, & Educational Data Mining*
+* *Research Focus: Trustworthy AI, Neuro-Symbolic Systems, & Educational Data Mining*
 
 [📧 Email](mailto:femi@furg.br) | [🔗 LinkedIn](https://linkedin.com/in/femicrownx)

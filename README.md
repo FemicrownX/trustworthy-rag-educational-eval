@@ -211,7 +211,7 @@ The system is evaluated using a three-dimensional framework covering Retrieval, 
 | Grade 6 | 100% |
 | Grade 7 | **30%** ⚠️ |
 
-> **Grade 7 Ceiling Finding:** All three models fail at Grade 7 — proven systematic across models, not model-specific. Root cause: the 7 KPI features lack journal quality signals (Qualis rankings). This is a publishable finding and the primary target for improvement before final defence.
+> **Grade 7 Ceiling Finding:** All three models fail at Grade 7 — proven systematic across models, not model-specific. Root cause: the 6 KPI features lack journal quality signals (Qualis rankings).
 
 ### Novel Finding — BERTScore vs. Groundedness Correlation
 
@@ -231,21 +231,19 @@ Pearson r analysis across 50 Semantic task rows reveals a positive correlation b
 
 | Limitation | Status |
 |---|---|
-| **Grade 7 Ceiling** | Qualis ranking integration planned before final defence |
-| **Computing department only** | ETL pipeline fully adaptable — Engineering + 1 dept planned |
-| **No human evaluation yet** | 3–5 program coordinators targeted before final defence |
-| **Word-overlap retrieval proxy** | Acknowledged — consistent with RAG evaluation literature |
-| **@k char-truncation approximation** | Disclosed — consistent with chunk_size=1000 setting |
+| **Grade 7 Ceiling** | Lack of Qualis ranking integration |
+| **Computing department only** | ETL pipeline fully adaptable — Additional departments for cross departments comparison |
+| **No human evaluation yet** | Necessity for 3–5 program coordinators|
 
 ---
 
 ## 📚 Manuscripts in Preparation
 
 **Paper 1:**
-> Adeola, F.S. et al. *"Navigating the Tension: Balancing Accuracy and Interpretability in Retrieval-Augmented Generation for Educational Policy"* — Manuscript in preparation, target: International AI Conference.
+> Adeola, F.S. et al. *"Navigating the Tension: Balancing Accuracy and Interpretability in Retrieval-Augmented Generation for Educational Policy"*
 
-**Paper 2:**
-> Adeola, F.S. *"A Framework for Trustworthy Policy Insights: Mitigating Hallucination in Retrieval-Augmented Generation for Brazilian Educational Data"* — Manuscript in preparation, based on M.Sc. research.
+**Thesis:**
+> Adeola, F.S. *"A Framework for Trustworthy Policy Insights: Mitigating Hallucination in Retrieval-Augmented Generation for Brazilian Educational Data"*
 
 ---
 
@@ -257,6 +255,7 @@ This project aligns with **UN Sustainable Development Goal 4 (Quality Education)
 - **Anti-hallucination:** The Symbolic Engine prevents quantitative hallucination. The Groundedness metric measures qualitative anchoring.
 - **Scalability:** The ETL pipeline is department-agnostic — adding Engineering or Medicine requires zero system rewrites.
 - **Bilingual:** Full Portuguese and English support via multilingual embeddings and bilingual prompting.
+- **Key Contributions** Therefore, Improved Educational Insights — Performance gain over LLM-only model & a scalable dashboard system
 
 ---
 

@@ -52,7 +52,7 @@ The central design insight is that educational program evaluation requires two f
 │  producoes.csv      ──┼──▶  │      │  paraphrase-multilingual ──▶ │
 │  participantes.csv  ──┘     │      │  FAISS Index    ──┘          │
 │                             │      │                              │
-│  7 KPIs computed via        │      │  Semantic retrieval k=10     │
+│  6 KPIs computed via        │      │  Semantic retrieval k=10     │
 │  Pandas/Python formulas     │      │  Recall@10 = 0.56            │
 │  Symbolic Accuracy: 86%     │      │  Groundedness = 0.68         │
 └──────────────┬──────────────┘      └──────────────┬───────────────┘

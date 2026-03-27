@@ -20,15 +20,14 @@ The PEPG 2.0 Evaluator is deployed as a bilingual (🇧🇷 PT / 🇺🇸 EN) Gr
 | **Annual Progress Monitoring** | Single-year diagnostic — select Year → Institution → Program → Generate Report |
 | **Quadrennial Cycle Evaluation** | 4-year evolution analysis with AI-predicted CAPES grade (3–7) |
 
-> 🔗 **[Launch Live System](https://gradio.live)** ← *Replace with your current Gradio URL*
-
+> 🔗 **[Launch Live System](https://31d070dd8f6f147069.gradio.live/)**
 ---
 
 ## 📖 Project Overview
 
-In the domain of Brazilian educational policy, **"black box" AI models are dangerous**. The Coordination for the Improvement of Higher Education Personnel (CAPES) evaluates over 7,000 graduate programs every four years — a complex, largely manual process that lacks real-time analytical tools for program coordinators and policymakers.
+In the sensitive domain of educational policy, **"black box" AI models present significant risks**. This research focuses on utilizing official Coordination for the Improvement of Higher Education Personnel (CAPES) data as a foundational grounding mechanism to mitigate Large Language Model (LLM) hallucinations. By anchoring the evaluation of over 7,000 graduate programs in deterministic, structured data, the PEPG 2.0 framework ensures that generative insights remain strictly aligned with official institutional metrics and performance indicators.
 
-Standard Large Language Models (LLMs) cannot solve this problem alone. Without access to local institutional data, they hallucinate key performance numbers and produce unverifiable outputs. Retrieval-Augmented Generation (RAG) partially addresses this — but retrieval alone does not guarantee transparency or institutional accountability.
+Standard Large Language Models (LLMs) cannot solve this problem alone. Without access to local institutional data, they hallucinate key performance numbers and produce unverifiable outputs. While Retrieval-Augmented Generation (RAG) serves as a bridge for contextual grounding, semantic retrieval alone lacks the deterministic logic required to ensure institutional accountability or absolute transparency.
 
 **PEPG 2.0** introduces a **Hybrid Neuro-Symbolic RAG architecture** that solves this by combining two reasoning paths:
 

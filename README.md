@@ -1,7 +1,7 @@
 # 🎓 PEPG 2.0 — AI-Powered Predictive & Analytical System for Graduate Program Evaluation
 ### *A Hybrid Neuro-Symbolic RAG Architecture for Trustworthy Educational Policy Decision-Support*
 
-> **⚠️ Research Status: Active — M.Sc. Qualification Completed (March 2026)**
+> **⚠️ Research Status: Active — M.Sc. Computer Engineering**
 >
 > This repository documents the **architectural framework, methodology, evaluation protocols, and empirical results** of my M.Sc. research at the **Federal University of Rio Grande (FURG)**, PPGComp — Graduate Program in Computer Engineering.
 >

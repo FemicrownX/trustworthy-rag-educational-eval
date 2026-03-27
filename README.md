@@ -78,9 +78,9 @@ The central design insight is that educational program evaluation requires two f
 | **Goal** | Zero-tolerance accuracy on quantitative KPIs |
 | **Method** | Pandas/Python deterministic formulas — LLM never guesses numbers |
 | **Input files** | `analytical_docentes.csv`, `analytical_discentes.csv`, `analytical_producoes.csv`, `analytical_participantes.csv` |
-| **Output** | 7 pre-computed KPIs injected into the prompt as immutable arithmetic facts |
+| **Output** | 6 pre-computed KPIs injected into the prompt as immutable arithmetic facts |
 
-**The 7 KPIs computed:**
+**The 6 KPIs computed:**
 
 | KPI | Maps to CAPES Pillar |
 |---|---|
@@ -88,7 +88,6 @@ The central design insight is that educational program evaluation requires two f
 | Student Success Rate | Corpo Discente |
 | PhD Training Density | Corpo Discente |
 | Total Intellectual Output | Produção Intelectual |
-| Productivity per Professor | Produção Intelectual |
 | Internationalization Ratio | Inserção Social |
 | Collaboration Intensity | Inserção Social |
 
@@ -277,7 +276,7 @@ pepg-2.0/
 │   └── faiss_index/            # Persisted FAISS index files [RESTRICTED]
 │
 ├── symbolic_engine/            # Left Brain — deterministic KPI computation
-│   ├── kpi_calculator.py       # 7 KPI formulas (Pandas)
+│   ├── kpi_calculator.py       # 6 KPI formulas (Pandas)
 │   └── logic_layer.py          # Prompt injection of immutable facts
 │
 ├── rag_engine/                 # Right Brain — semantic retrieval

@@ -245,7 +245,7 @@ Pearson r analysis across 50 Semantic task rows reveals a positive correlation b
 ## 📚 Manuscripts in Preparation
 
 **Paper 1**
-> Adeola, F.S. et al. *"Navigating the Tension: Balancing Accuracy and Interpretability in Retrieval-Augmented Generation for Educational Policy"* — Target: International AI Conference
+> Adeola, F.S. et al. *"Navigating the Tension: Balancing Accuracy and Interpretability in Retrieval-Augmented Generation for Educational Policy"* — Research Paper
 
 **Thesis**
 > Adeola, F.S. *"A Framework for Trustworthy Policy Insights: Mitigating Hallucination in Retrieval-Augmented Generation for Brazilian Educational Data"* — M.Sc. Thesis, FURG PPGComp, 2026

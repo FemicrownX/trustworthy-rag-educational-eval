@@ -54,7 +54,7 @@ The central design insight is that educational program evaluation requires two f
 │  producoes.csv      ──┼──▶   │      │  paraphrase-multi  ──┼──▶   │
 │  participantes.csv  ──┘      │      │  FAISS Index       ──┘       │
 │                              │      │                              │
-│  7 KPIs — Pandas formulas    │      │  Semantic retrieval k=10     │
+│  6 KPIs — Pandas formulas    │      │  Semantic retrieval k=10     │
 │  Symbolic Accuracy: 86%      │      │  Recall@10 = 0.56            │
 │                              │      │  Groundedness  = 0.68        │
 └──────────────┬───────────────┘      └──────────────┬───────────────┘
@@ -88,7 +88,6 @@ The central design insight is that educational program evaluation requires two f
 | Student Success Rate | Corpo Discente |
 | PhD Training Density | Corpo Discente |
 | Total Intellectual Output | Produção Intelectual |
-| Productivity per Professor | Produção Intelectual |
 | Internationalization Ratio | Inserção Social |
 | Collaboration Intensity | Inserção Social |
 
@@ -215,7 +214,7 @@ The system is evaluated using a three-dimensional framework covering Retrieval, 
 | Grade 6 | 100% |
 | Grade 7 | **30%** ⚠️ |
 
-> **Grade 7 Ceiling Finding:** All three models systematically underperform at Grade 7 — proven cross-model, not model-specific. Root cause: the 7 KPI features lack journal quality signals (Qualis rankings). This is an identified research gap and the primary target for improvement before final defence.
+> **Grade 7 Ceiling Finding:** All three models systematically underperform at Grade 7 — proven cross-model, not model-specific. Root cause: the 6 KPI features lack journal quality signals (Qualis rankings). This is an identified research gap and the primary target for improvement.
 
 ### Novel Finding — BERTScore vs. Groundedness Correlation
 

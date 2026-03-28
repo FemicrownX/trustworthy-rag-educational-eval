@@ -261,7 +261,7 @@ This project aligns with **UN Sustainable Development Goal 4 (Quality Education)
 
 ## 🗂️ Repository Structure
 
-```
+```text
 pepg-2.0/
 │
 ├── etl/                        # Data ingestion and preprocessing pipeline
@@ -273,24 +273,19 @@ pepg-2.0/
 │   ├── embed_proposals.py      # paraphrase-multilingual-mpnet-base-v2
 │   └── faiss_index/            # Persisted FAISS index files [RESTRICTED]
 │
-├── symbolic_engine/            # Left Brain — deterministic KPI computation
-│   ├── kpi_calculator.py       # 6 KPI formulas (Pandas)
-│   └── logic_layer.py          # Prompt injection of immutable facts
+├── evaluation/                 # RAG³ evaluation framework & dataset generation
+│   ├── build_dataset.py        # Generates Master 150-row benchmark dataset
+│   ├── run_inference.py        # Batch LLM inference (Symbolic + Semantic routing)
+│   ├── scoring.py              # Orchestrator for Symbolic, Prediction, and Semantic scoring
+│   ├── retrieval_metrics.py    # Context Recall@k, Precision, F1 calculations
+│   └── generation_metrics.py   # BERTScore, ROUGE-L, and Groundedness calculations
 │
-├── rag_engine/                 # Right Brain — semantic retrieval
-│   ├── retriever.py            # FAISS retrieval (k=10)
-│   └── generator.py            # LLM inference (DeepSeek / Gemini / GPT-4o)
+├── dashboard/                  # Gradio bilingual prescriptive interface
+│   └── app.py                  # Live RAG/Symbolic engine execution & UI rendering
 │
-├── evaluation/                 # RAG³ evaluation framework
-│   ├── benchmark_dataset.csv   # 150-row master dataset [RESTRICTED]
-│   ├── scoring.py              # Symbolic, Prediction, Semantic scorers
-│   ├── retrieval_metrics.py    # Recall@k, Precision, F1
-│   └── generation_metrics.py   # BERTScore, ROUGE-L, Groundedness
-│
-├── dashboard/                  # Gradio bilingual interface
-│   └── app.py                  # Annual Monitoring + Quadrennial Cycle tabs
-│
-├── results/                    # Benchmark outputs and figures
+├── results/                    # Benchmark outputs and visualization scripts
+│   ├── generate_etl_figures.py       # Scripts to plot conceptual/ETL thesis diagrams
+│   ├── generate_benchmark_figures.py # Scripts to plot final model benchmark results
 │   ├── Fig1_RAG_vs_Baseline.png
 │   ├── Fig2_Recall_at_K.png
 │   ├── Fig3_Grade_Accuracy_Heatmap.png
@@ -300,7 +295,9 @@ pepg-2.0/
 │   ├── Fig7_Symbolic_Failures.png
 │   └── Fig8_Full_Benchmark_Heatmap.png
 │
-└── README.md
+├── .gitignore                  # LGPD privacy rules and environment exclusions
+├── requirements.txt            # Project dependencies
+└── README.md                   # Project documentation
 ```
 
 > **Note:** Files marked [RESTRICTED] contain identifiable institutional data protected under LGPD. Access available to academic supervisors upon request.

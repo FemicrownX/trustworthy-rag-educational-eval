@@ -255,7 +255,7 @@ This project aligns with **UN Sustainable Development Goal 4 (Quality Education)
 - **Anti-hallucination:** The Symbolic Engine prevents quantitative hallucination. The Groundedness metric measures qualitative anchoring.
 - **Scalability:** The ETL pipeline is department-agnostic — adding Engineering or Medicine requires zero system rewrites.
 - **Bilingual:** Full Portuguese and English support via multilingual embeddings and bilingual prompting.
-- **Key Contributions** Therefore, Improved Educational Insights — Performance gain over LLM-only model & a scalable dashboard system
+- **Key Contributions** In conclusion, Delivers improved educational insights, demonstrating significant performance gains over LLM-only models through a scalable, hallucination-resistant dashboard system.
 
 ---
 

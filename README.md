@@ -167,7 +167,7 @@ The system is evaluated using a three-dimensional framework covering Retrieval, 
 |---|---|---|
 | **Groundedness** | BERTScore F1 between `Generated_Report` and inference-time `Retrieved_Context` — soft hallucination resistance proxy — Es et al. (2023) RAGAS spirit | 0.676 — DeepSeek |
 
-### 5.4 Human Metrics *(Planned — Before Final Defence)*
+### 5.4 Human Metrics *(Planned — post *
 
 **Policy Usefulness** — evaluated by 3–5 program coordinators using a 4-dimension rubric, each scored 1–5:
 
@@ -234,9 +234,9 @@ Pearson r analysis across 50 Semantic task rows reveals a positive correlation b
 
 | Limitation | Detail | Plan |
 |---|---|---|
-| **Grade 7 Ceiling** | KPI features lack Qualis journal quality signals | Qualis integration before final defence |
+| **Grade 7 Ceiling** | KPI features lack Qualis journal quality signals | Qualis integration - post |
 | **Computing dept. only** | FAISS index currently covers Computing programs only | Index Engineering + 1 additional dept. — ETL requires zero rewrites |
-| **No human evaluation yet** | Policy Usefulness metric not yet completed | 3–5 program coordinators before final defence |
+| **No human evaluation yet** | Policy Usefulness metric not yet completed | 3–5 program coordinators |
 | **Word-overlap retrieval proxy** | Recall/Precision use character-level overlap, not binary chunk relevance | Disclosed — consistent with RAG evaluation literature |
 | **@k char-truncation approximation** | Recall@k simulated by truncating Retrieved_Context to k×1000 chars | Disclosed — consistent with chunk_size=1000 setting |
 

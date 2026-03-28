@@ -80,7 +80,7 @@ The central design insight is that educational program evaluation requires two f
 | **Input files** | `analytical_docentes.csv` · `analytical_discentes.csv` · `analytical_producoes.csv` · `analytical_participantes.csv` |
 | **Output** | 7 pre-computed KPIs injected into the prompt as immutable arithmetic facts |
 
-**The 7 KPIs and their CAPES pillar mapping:**
+**The 6 KPIs and their CAPES pillar mapping:**
 
 | KPI | CAPES Pillar |
 |---|---|

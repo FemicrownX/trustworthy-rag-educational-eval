@@ -1,0 +1,32 @@
+# Environments and API Keys
+.env
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# ⚠️ RESTRICTED & GENERATED DATA ⚠️
+# Ignore the entire output directory where your scripts dump CSVs
+output/
+"AI-Powered PEPG 2.0 Evaluator/output/"
+
+# Ignore the FAISS index files (heavy and potentially contain PII chunks)
+embeddings/faiss_index/
+*knowledgebase_faiss*/
+
+# Ignore the master benchmark and raw CSVs to comply with LGPD
+evaluation/benchmark_dataset.csv
+*150_Datasets.csv
+*100_Datasets.csv
+*50_Datasets.csv
+parsed/

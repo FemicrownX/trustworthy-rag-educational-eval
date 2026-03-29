@@ -1,0 +1,55 @@
+# ==========================================
+# PEPG 2.0 Dependencies
+# ==========================================
+
+# ── Core Data & Processing ──
+pandas==2.3.2
+numpy==1.26.4
+scikit-learn
+networkx
+
+# ── AI, Embeddings & Vector Store ──
+torch
+transformers==4.45.2
+sentence-transformers==3.4.1
+accelerate
+bitsandbytes
+faiss-cpu
+sentencepiece
+llama-cpp-python
+
+# ── LLM Orchestration & APIs ──
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-google-genai
+langchain-openai
+langchain-ollama
+langchain-experimental
+openai
+google-generativeai
+
+# ── Evaluation Metrics ──
+bert-score
+rouge-score
+
+# ── UI & Visualizations ──
+gradio
+matplotlib
+seaborn
+plotly
+
+# ── Utilities & Document Handling ──
+python-dotenv
+tqdm
+requests
+tabulate
+langdetect
+PyPDF2
+
+# ── Development & Notebook Environment ──
+jupyter
+ipykernel
+ipython==9.4.0
+nbformat

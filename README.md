@@ -7,7 +7,7 @@
 
 This framework evaluates the **PEPG 2.0 Hybrid Neuro-Symbolic RAG** system
 for predicting and analysing CAPES graduate program outcomes.
-It is organised into four self-contained execution notebooks sharing one central configuration engine.
+It is organised into four self-contained execution notebooks sharing one central configuration engine. The live deployment features a Gradio dashboard with an optimized, stacked visual architecture for rendering predictions and strategic recommendations dynamically from local reference files.
 
 ---
 
@@ -209,16 +209,7 @@ PEPG 2.0 combines two engines:
 - `fetch_k=200000` required when filtering by `program_id` to avoid silent data loss.
 - Embedding model: `sentence-transformers/paraphrase-multilingual-mpnet-base-v2`
 
-Both engines feed into `calculate_final_grade()` in `config.py`, which applies the deterministic rule engine to produce a predicted CAPES grade (1–7).
-
----
-
-## Known Limitations
-
-1. **Grade 7 ceiling** — Missing Qualis journal/conference ranking KPIs cause systematic under-prediction of Grade 7 programs. Confirmed across all three models.
-   *Fix: Advanced Qualis integration (Phase 2 remaining work).*
-2. **5 top programs missing parsed folders** — UFRGS, UNICAMP, USP, UFPE, UFF have no proposal TXT in the parsed directory. This is a data availability gap, not a system bug.
-3. **FAISS cross-domain scope** — Current index covers Computing programs only. Expansion to Engineering and one additional department planned for Phase 2.
+Both engines feed into `calculate_final_grade()` in `config.py`, which applies the deterministic rule engine to produce a predicted CAPES grade (1–7). The dashboard renders this via adaptive HTML/CSS stacked visual blocks for optimal readability.
 
 ---
 

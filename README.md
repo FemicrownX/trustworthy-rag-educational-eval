@@ -17,10 +17,10 @@ PEPG 2.0 is a **domain-agnostic institutional evaluation framework** that combin
 rule-based scoring (Symbolic Engine) with retrieval-augmented generation (Neural Engine) to predict
 and explain the official CAPES quadrennial grades assigned to Brazilian graduate programs.
 
-The framework is built as a **Universal Institutional Software Framework** — the hybrid grading
+The framework is built as a **Institutional Framework** — the hybrid grading
 engine is completely decoupled from any single knowledge area. Expanding to a new CAPES department
 (Engineering, Law, Medicine, etc.) requires only a new YAML configuration file and a single
-environment variable change. No Python code is modified.
+environment variable change. Modification not necessary.
 
 A live Gradio dashboard is deployed on HuggingFace Spaces, featuring real-time KPI benchmark
 comparison, neural semantic score transparency, holistic researcher profiling, and grade confidence indicators.

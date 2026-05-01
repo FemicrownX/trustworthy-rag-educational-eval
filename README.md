@@ -1,4 +1,4 @@
-# PEPG 2.0 — Hybrid Neuro-Symbolic RAG Framework for Graduate Program Evaluation
+# PEPG 2.0 — A Neuro-Symbolic RAG Framework for Graduate Program Evaluation
 
 > **MSc Thesis · FURG PPGComp · Femi Samuel Adeola**
 > Supervisor: Prof. Eduardo N. Borges · Co-supervisor: Prof. Rodrigo De Bem

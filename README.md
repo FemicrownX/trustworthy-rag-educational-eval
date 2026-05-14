@@ -358,7 +358,38 @@ PEPG 2.0 uses an **instance-level deployment model** — all rules and threshold
   note      = {Programa de Pós-Graduação em Computação (PPGComp)}
 }
 ```
-
+pepg2-neuro-symbolic/
+│
+├── README.md                    ← Updated with full eval results
+├── requirements.txt
+├── computacao.yaml              ← The "rules cartridge" concept
+│
+├── src/
+│   ├── config.py
+│   ├── etl.py
+│   ├── prompts.py
+│   ├── engine/
+│   │   ├── symbolic.py
+│   │   └── neural.py
+│   ├── evaluation/
+│   │   ├── evaluator.py
+│   │   └── analytics.py
+│   └── dashboard.py
+│
+├── notebooks/
+│   ├── 00_ETL.ipynb
+│   ├── 01_Controlled_Benchmark_150.ipynb    ← Conference paper evidence
+│   ├── 02_Full_Population_Eval.ipynb        ← Thesis upgrade evidence
+│   ├── 03_Annual_RAG.ipynb
+│   ├── 04_Calibration.ipynb
+│   └── 05_Analytics.ipynb
+│
+├── results/                                 ← Key: "Benchmark Results.csv" equivalent
+│   ├── benchmark_150_deepseek.csv           ← Conference paper dataset
+│   ├── CALIBRATED_EVALUATED1_*.csv          ← Full population results
+│   └── ANNUAL_REPORTS_CACHE_*.csv
+│
+└── app.py
 ---
 
 ## License
